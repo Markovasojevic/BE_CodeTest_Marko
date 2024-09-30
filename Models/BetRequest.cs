@@ -1,9 +1,14 @@
-using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BE_CodeTest.Models
 {
-    public class BetRequest
-    {
-        // TODO
-    }
+	[ExcludeFromCodeCoverage]
+	public record BetRequest(
+		 int PlayerId,
+		 string Game,
+		 string TransactionId,
+		 string Currency,
+		 decimal Amount,
+		 long RoundId
+	);
 }
